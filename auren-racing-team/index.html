@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Auren Racing Team</title>
+  <meta name="theme-color" content="#3a0606">
+  <link rel="icon" type="image/png" sizes="64x64" href="../img/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png">
+  <link rel="preload" as="image" href="../img/background.jpg">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+
+    html { height: 100%; }
+
+    body {
+      min-height: 100vh;
+      min-height: 100dvh;
+      /* Dark red fallback while the image loads */
+      background-color: #3a0606;
+      background-image: url("../img/background.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+      color: #fff;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    /* iOS Safari ignores background-attachment: fixed, so use scroll there */
+    @supports (-webkit-touch-callout: none) {
+      body { background-attachment: scroll; }
+    }
+
+    main {
+      flex: 1;
+      width: 100%;
+      padding: 24px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(28px, 5vw, 48px);
+    }
+
+    .logo {
+      display: block;
+      width: min(70vw, 720px);
+      height: auto;
+      filter: drop-shadow(0 4px 24px rgba(0, 0, 0, 0.35));
+    }
+
+    .social {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 16px;
+    }
+
+    .social a {
+      display: grid;
+      place-items: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 2px solid rgba(255, 255, 255, 0.85);
+      color: #fff;
+      transition: background-color 0.2s, color 0.2s, transform 0.2s;
+    }
+
+    .social a:hover,
+    .social a:focus-visible {
+      background-color: #fff;
+      color: #a00012;
+      transform: translateY(-2px);
+    }
+
+    .social a:focus-visible {
+      outline: 2px solid #fff;
+      outline-offset: 3px;
+    }
+
+    .social svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    footer {
+      padding: 16px 16px max(16px, env(safe-area-inset-bottom));
+      text-align: center;
+      font-size: 14px;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.8);
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    }
+
+    footer p { margin: 0; }
+
+    .org-link {
+      display: block;
+      width: fit-content;
+      margin: 0 auto;
+      text-decoration: none;
+      transition: transform 0.2s;
+    }
+
+    .org-link:hover,
+    .org-link:focus-visible { transform: translateY(-2px); }
+
+    .org-logo {
+      display: block;
+      width: 96px;
+      height: auto;
+      margin: 0 auto 12px;
+      opacity: 0.9;
+      filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.35));
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    footer a:hover { text-decoration-thickness: 2px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1 style="margin:0">
+      <img class="logo" src="../img/logo.png" alt="Auren Racing Team" width="2000" height="642">
+    </h1>
+
+    <ul class="social">
+      <li>
+        <a href="https://www.facebook.com/profile.php?id=61573399904624" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M13.5 22v-8.2h2.8l.4-3.2h-3.2V8.5c0-.9.3-1.6 1.6-1.6h1.7V4.1c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.4H7.3v3.2h2.8V22h3.4z"/>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/auren_racing_team/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="mailto:aurenbike@gmail.com" aria-label="Email aurenbike@gmail.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="5" width="18" height="14" rx="2"/>
+            <path d="M3.5 6.5 12 13l8.5-6.5"/>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </main>
+
+  <footer>
+    <a class="org-link" href="../" aria-label="AurenBike home"><img class="org-logo" src="../img/aurenbike.svg" alt="AurenBike" width="2624" height="1328"></a>
+    <p><a href="mailto:aurenbike@gmail.com">aurenbike@gmail.com</a></p>
+    <p>&copy; 2026 Associação Desportiva AurenBike. All rights reserved.</p>
+  </footer>
+</body>
+</html>

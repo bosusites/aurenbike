@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Auren Racing Team</title>
+  <title>AurenBike</title>
   <meta name="theme-color" content="#3a0606">
   <link rel="icon" type="image/png" sizes="64x64" href="img/favicon.png">
   <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
@@ -54,9 +54,46 @@
 
     .logo {
       display: block;
-      width: min(70vw, 720px);
+      width: min(60vw, 440px);
       height: auto;
       filter: drop-shadow(0 4px 24px rgba(0, 0, 0, 0.35));
+    }
+
+    .team-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 24px;
+      border: 2px solid rgba(255, 255, 255, 0.85);
+      border-radius: 999px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      transition: background-color 0.2s, color 0.2s, transform 0.2s;
+    }
+
+    .team-link svg {
+      width: 18px;
+      height: 18px;
+      transition: transform 0.2s;
+    }
+
+    .team-link:hover,
+    .team-link:focus-visible {
+      background-color: #fff;
+      color: #a00012;
+      transform: translateY(-2px);
+    }
+
+    .team-link:hover svg,
+    .team-link:focus-visible svg { transform: translateX(3px); }
+
+    .team-link:focus-visible {
+      outline: 2px solid #fff;
+      outline-offset: 3px;
     }
 
     .social {
@@ -118,8 +155,15 @@
 <body>
   <main>
     <h1 style="margin:0">
-      <img class="logo" src="img/logo.png" alt="Auren Racing Team" width="2000" height="642">
+      <img class="logo" src="img/aurenbike.svg" alt="AurenBike" width="2624" height="1328">
     </h1>
+
+    <a class="team-link" href="auren-racing-team/">
+      Auren Racing Team
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M5 12h14M13 6l6 6-6 6"/>
+      </svg>
+    </a>
 
     <ul class="social">
       <li>
