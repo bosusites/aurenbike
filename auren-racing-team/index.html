@@ -133,9 +133,46 @@
     }
 
     footer a:hover { text-decoration-thickness: 2px; }
+
+    .back {
+      position: absolute;
+      top: max(16px, env(safe-area-inset-top));
+      left: max(16px, env(safe-area-inset-left));
+      display: grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 2px solid rgba(255, 255, 255, 0.85);
+      color: #fff;
+      transition: background-color 0.2s, color 0.2s, transform 0.2s;
+    }
+
+    .back svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .back:hover,
+    .back:focus-visible {
+      background-color: #fff;
+      color: #a00012;
+      transform: translateX(-2px);
+    }
+
+    .back:focus-visible {
+      outline: 2px solid #fff;
+      outline-offset: 3px;
+    }
   </style>
 </head>
 <body>
+  <a class="back" href="../" aria-label="Back to AurenBike">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M19 12H5M11 6l-6 6 6 6"/>
+    </svg>
+  </a>
+
   <main>
     <h1 style="margin:0">
       <img class="logo" src="../img/logo.png" alt="Auren Racing Team" width="2000" height="642">
